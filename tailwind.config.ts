@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -9,14 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Paleta sugerida: verdes naturales y dorados tierra
-        'forest-dark': '#3F6B3F',
-        'forest': '#5A8A5A',
-        'forest-light': '#7BA37B',
-        'earth-gold': '#9C7A3C',
-        'earth-light': '#B8956A',
-        'cream': '#FAF8F3',
-        'cream-dark': '#F5F2E8',
+        'forest-dark': '#1a3a3a',
+        'forest': '#2d5a5a',
+        'forest-light': '#4a7575',
+        'earth': '#8b6f47',
+        'earth-light': '#a0845c',
+        'cream': '#f5f1e8',
+        'cream-dark': '#e8e1d4',
       },
       fontFamily: {
         display: ['Playfair Display', 'serif'],
@@ -25,5 +24,6 @@ const config: Config = {
     },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;
