@@ -1,74 +1,67 @@
-export type Bed = 'doble' | 'semidoble' | 'sencilla' | 'nicho sencillo' | 'sofá cama';
-
 export interface Room {
-  id: string;
+  id: number;
   name: string;
-  beds: { type: Bed; quantity: number }[];
   capacity: number;
-  images: string[];
+  beds: { type: string; quantity: number }[];
   description?: string;
+  images: string[];
 }
 
-/**
- * Datos de las 5 habitaciones de la finca.
- * TODO: Reemplazar URLs de imágenes con fotos reales de la finca.
- */
 export const rooms: Room[] = [
   {
-    id: 'habitacion-1',
-    name: 'Habitación 1',
-    beds: [{ type: 'doble', quantity: 1 }],
+    id: 1,
+    name: 'Habitación Principal',
     capacity: 2,
-    images: [
-      'https://images.unsplash.com/photo-1631049307038-da0ec84d8a46?w=800&q=80',
+    beds: [
+      { type: 'Cama Doble', quantity: 1 },
+      { type: 'Baño Privado', quantity: 1 },
     ],
-    description: 'Habitación con cama doble, baño privado y vista a la naturaleza.',
+    description: 'Suite con vista al jardín, baño con ducha y amenidades premium.',
+    images: ['/images/rooms/room-1.jpg'],
   },
   {
-    id: 'habitacion-2',
-    name: 'Habitación 2',
-    beds: [{ type: 'doble', quantity: 1 }],
+    id: 2,
+    name: 'Habitación Deluxe',
     capacity: 2,
-    images: [
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
-    ],
-    description: 'Habitación con cama doble, baño privado y acceso a terraza.',
-  },
-  {
-    id: 'habitacion-3',
-    name: 'Habitación 3',
     beds: [
-      { type: 'semidoble', quantity: 1 },
-      { type: 'sencilla', quantity: 2 },
+      { type: 'Cama Doble', quantity: 1 },
+      { type: 'Baño Privado', quantity: 1 },
     ],
-    capacity: 4,
-    images: [
-      'https://images.unsplash.com/photo-1540932239986-310128078ceb?w=800&q=80',
-    ],
-    description:
-      'Habitación con 1 cama semidoble y 2 sencillas, ideal para familias.',
+    description: 'Habitación confortable con balcón, TV por cable y aire acondicionado.',
+    images: ['/images/rooms/room-2.jpg'],
   },
   {
-    id: 'habitacion-4',
-    name: 'Habitación 4',
-    beds: [{ type: 'doble', quantity: 2 }],
-    capacity: 4,
-    images: [
-      'https://images.unsplash.com/photo-1591088323688-a8efa6e5dffe?w=800&q=80',
-    ],
-    description: 'Habitación con 2 camas dobles, perfecta para dos parejas.',
-  },
-  {
-    id: 'habitacion-5',
-    name: 'Habitación 5 - Suite',
+    id: 3,
+    name: 'Habitación Familiar',
+    capacity: 3,
     beds: [
-      { type: 'doble', quantity: 1 },
-      { type: 'sofá cama', quantity: 1 },
+      { type: 'Cama Doble', quantity: 1 },
+      { type: 'Cama Sencilla', quantity: 1 },
+      { type: 'Baño Privado', quantity: 1 },
     ],
-    capacity: 4,
-    images: [
-      'https://images.unsplash.com/photo-1568605116036-5312f7fbe0a8?w=800&q=80',
+    description: 'Ideal para familias pequeñas. Amplia, con zona de estar integrada.',
+    images: ['/images/rooms/room-3.jpg'],
+  },
+  {
+    id: 4,
+    name: 'Habitación Twin',
+    capacity: 2,
+    beds: [
+      { type: 'Cama Sencilla', quantity: 2 },
+      { type: 'Baño Privado', quantity: 1 },
     ],
-    description: 'Suite con cama doble y sofá cama, espacio amplio con baño privado.',
+    description: 'Dos camas individuales, perfecta para amigos o compañeros de viaje.',
+    images: ['/images/rooms/room-4.jpg'],
+  },
+  {
+    id: 5,
+    name: 'Habitación Estándar',
+    capacity: 2,
+    beds: [
+      { type: 'Cama Doble', quantity: 1 },
+      { type: 'Baño Privado', quantity: 1 },
+    ],
+    description: 'Habitación acogedora con todas las comodidades necesarias.',
+    images: ['/images/rooms/room-5.jpg'],
   },
 ];

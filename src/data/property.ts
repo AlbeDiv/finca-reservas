@@ -1,39 +1,21 @@
-export interface PropertyInfo {
-  name: string;
-  location: string;
-  region: string;
-  capacity: number;
-  totalRooms: number;
-  distanceFromPereira: string;
-  distanceFromManizales: string;
-  distanceFromArmenia: string;
-  distanceFromCartago: string;
-  whatsappNumber: string; // Formato: +57XXXXXXXXXX
-  email: string;
-  coordinates: {
-    latitude: number;
-    longitude: number;
-  };
-}
-
-/**
- * Información de la propiedad.
- * TODO: Actualizar con datos reales de la finca (coordenadas, email, número de WhatsApp).
- */
-export const propertyInfo: PropertyInfo = {
+export const propertyInfo = {
   name: 'Finca Turística Belalcázar',
-  location: 'Belalcázar, Caldas',
-  region: 'Eje Cafetero',
-  capacity: 12,
+  location: 'Belalcázar, Caldas - Colombia',
+  distanceFromPereira: '45 km (~1 hora)',
+  distanceFromManizales: '60 km (~1.5 horas)',
+  distanceFromArmenia: '90 km (~2 horas)',
+  whatsappNumber: '+57 300 1234567',
+  email: 'info@fincabelalcazar.com',
+  maxCapacity: 12,
   totalRooms: 5,
-  distanceFromPereira: '45 km',
-  distanceFromManizales: '35 km',
-  distanceFromArmenia: '60 km',
-  distanceFromCartago: '50 km',
-  whatsappNumber: '+573001234567', // TODO: reemplazar con número real
-  email: 'info@fincabelalcazar.com', // TODO: reemplazar con email real
-  coordinates: {
-    latitude: 5.3667, // TODO: coordenadas reales
-    longitude: -75.5, // TODO: coordenadas reales
-  },
+  description:
+    'Finca exclusiva para alojamiento de grupos en el corazón del Eje Cafetero. Naturaleza, confort y experiencias inolvidables.',
+  amenities: [
+    'WiFi en toda la propiedad',
+    'Parqueadero incluido',
+    'Áreas verdes y jardines',
+    'Acceso a actividades recreativas',
+    'Atención personalizada 24/7',
+    'Facilidades para eventos',
+  ],
 };

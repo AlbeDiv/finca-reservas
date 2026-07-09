@@ -1,54 +1,38 @@
 export interface StayRate {
   nights: number;
-  totalPrice: number; // COP
-  pricePerPerson: number; // COP
-  discountPercentage?: number; // Descuento vs. 1 noche
+  totalPrice: number;
+  pricePerPerson: number;
+  discountPercentage?: number;
+  featured?: boolean;
 }
 
-export interface MealRate {
-  service: 'desayuno' | 'almuerzo' | 'cena';
-  pricePerPerson: number; // COP
-}
-
-/**
- * Tarifas de estadía para grupos de hasta 12 personas.
- * Basadas en el análisis del plan de desarrollo.
- * TODO: Actualizar con tarifas reales del cliente.
- */
 export const stayRates: StayRate[] = [
   {
     nights: 1,
-    totalPrice: 1294010,
-    pricePerPerson: 107834,
+    totalPrice: 1200000,
+    pricePerPerson: 100000,
     discountPercentage: 0,
+    featured: false,
   },
   {
     nights: 2,
-    totalPrice: 2441529,
-    pricePerPerson: 203461,
-    discountPercentage: 5.7,
+    totalPrice: 2160000,
+    pricePerPerson: 90000,
+    discountPercentage: 10,
+    featured: false,
   },
   {
     nights: 3,
-    totalPrice: 3454994,
-    pricePerPerson: 287916,
-    discountPercentage: 11.0,
+    totalPrice: 3000000,
+    pricePerPerson: 83333,
+    discountPercentage: 16.7,
+    featured: true,
   },
   {
-    nights: 4,
-    totalPrice: 4335171,
-    pricePerPerson: 361264,
-    discountPercentage: 16.2,
+    nights: 5,
+    totalPrice: 4800000,
+    pricePerPerson: 80000,
+    discountPercentage: 20,
+    featured: false,
   },
-];
-
-/**
- * Tarifas de servicios de alimentación (opcional).
- * Se coordina directamente con la finca.
- * TODO: Confirmar tarifas con el cliente.
- */
-export const mealRates: MealRate[] = [
-  { service: 'desayuno', pricePerPerson: 10000 },
-  { service: 'almuerzo', pricePerPerson: 18000 },
-  { service: 'cena', pricePerPerson: 10000 },
 ];
